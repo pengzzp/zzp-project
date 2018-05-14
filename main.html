@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			/*body{overflow-x:hidden;}*/
+			*{
+				padding: 0;margin: 0;
+			}
+			a{text-decoration:none; color:#333;}
+			h1,h3,h4,h2,h5,h6,b,strong{font-weight:normal;}
+			i,em{font-style:normal;}
+			li{list-style:none;}
+			a,input,img,span{outline:none;cursor: pointer;}
+			body{font:12px "微软雅黑";height:2000px;width:100%;}
+			a:hover{
+				/*border-bottom: 1px solid white;*/
+			}
+			.top{
+				width: 100%;
+				height: 130px;
+				background: black;
+				position: fixed;
+				top: 0;
+				z-index: 999;
+				box-sizing: border-box;
+			}
+			.top .active{
+				position: fixed;
+				top: 0;
+			}
+			.top .header{
+				width: 100%;
+				height:62%;
+				background: black;
+				position: relative;
+			}
+			.header .logo{
+				position: absolute;
+				top: 50%;margin-top: -20px;
+				left: 60px;
+				width: 163px;
+				height: 40px;
+				background:url(img/db2267771010d49d8837c2978ea22d0.png) no-repeat;
+				/*background-position: -96px -86px;*/
+			}
+			.header .denglu{
+				color:white;
+				width: 143px;
+				height:100%;
+				position: absolute;
+				left: 680px;
+				line-height: 80px;
+				text-align: center;
+				box-sizing: border-box;
+			} 
+			.header .s1,.header .carrnum,.header .liaotian,.header .search,.header .wenti{
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				top: 50%;right: 0;
+				margin-top: -15px;
+				text-align: center;
+				line-height: 30px;
+			}
+			.header .denglu .s1{
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -96px -86px;
+			}
+			.header .denglu:hover .s1{
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -136px -66px;
+			}
+			.header .gwc{
+				width: 116px;
+				height: 100%;
+				color:white;
+				position: absolute;
+				left: 830px;
+				line-height: 80px;
+				text-align: center;
+				box-sizing: border-box;
+			}
+			.header .gwc .carrnum{
+				color: white;
+				font-size: 15px;
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -168px -97px;
+			}
+			.header .lt,.header .ss,.header .wt{
+				width:80px;
+				height:100%;
+				position: relative;
+				float: left;
+			}
+			.header .lt .liaotian{
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -95px -54px;
+			}
+			.header .ss .search{
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -137px -161px;
+			}
+			.header .wt .wenti{
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -168px -161px;
+			}
+			.header .lt .liaotian:hover{
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -135px -33px;
+			}
+			.header .ss .search:hover{
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -135px -1px;
+			}
+			.header .wt .wenti:hover{
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -167px -1px;
+			}
+			.header .lt{
+				margin-left: 950px;
+			}
+			.top .list{
+				width: 100%;
+				height: 38%;
+				background:#464646;
+				position: relative;
+				text-align: center;
+			}
+			.top .list ul{
+				display: inline-block;
+				height: 100%;
+			}
+			.top .list ul li{
+				width: 134px;
+				height: 100%;
+				float: left;
+				text-align: center;
+			}
+			.top .list ul li a{
+				display: block;
+				height: 100%;
+				color: white;
+				font-size: 18px;
+				line-height: 40px;
+				position: relative;
+			}
+			.top .list ul li a i{
+				position: absolute;
+				bottom: 10px;left: 50%;margin-left: -6px;
+				border-top: 6px solid white;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-bottom: none;
+			}
+			.liaoliaoba{
+				display: block;
+				position:absolute;
+				right: 0;
+				top: 200px;
+				z-index: 999;
+			}
+			.notice{
+				width: 100%;
+				height: 54px;
+				position: relative;
+				margin: 0 auto;
+				text-align: center;
+				line-height: 20px;
+			}
+			.lbt{
+				width: 100%;
+				height: 529px;
+				position: relative;
+			}
+			.lbt .img{
+				width: 100%;
+				height: 493px;
+				position:relative;
+				top: 0;
+				overflow: hidden;
+			}
+			.lbt .img li{
+				float: left;
+				position: absolute;
+			}
+			.lbt .img li:nth-of-type(1){
+				z-index: 1;
+			}
+			.lbt .img li img{
+				width: 100%;
+				height: 493px;
+			}
+			.lbt span{
+				display: block;
+				width: 40px;
+				height: 100px;
+				background: black;
+				opacity: 0.8;
+				z-index:10;
+				text-align:center;
+				line-height:140px;
+			}
+			.lbt .next{
+				position: absolute;
+				right: 0;top: 50%;
+				margin-top: -50px;
+			}
+			.lbt .next i{
+				display: inline-block;
+				width: 40px;
+				height: 50px;
+				background:url(img/homeslide_arrow.png) no-repeat;
+				background-position: 10px 5px;
+			}
+			.lbt .prev{
+				position: absolute;
+				left: 0;top: 50%;
+				margin-top: -50px;
+			}
+			.lbt .prev i{
+				display: inline-block;
+				width: 40px;
+				height: 50px;
+				background:url(img/homeslide_arrow.png) no-repeat;
+				background-position: 10px -41px;
+			}
+			.lbt .list{
+				height: 36px;
+				width: 100%;
+				text-align: center;
+				position: absolute;
+				bottom: 0;
+			}
+			.lbt .list li{
+				display: inline-block;
+				height: 26px;
+				margin-left: 8px;
+				line-height:26px;
+				font-weight: bold;
+				font-size: 13px;
+				margin-top: 10px;
+				color: darkgray;
+				box-sizing: border-box;
+			}
+			.div1{
+				width: 100%;
+				height: 493px;
+			}
+			.div1 img{
+				width: 100%;
+				height:493px;
+			}
+			.hot{
+				width: 1000px;
+				height: 1087px;
+				margin: 35px auto;
+				/*background: gray;*/
+				position: relative;
+			}
+			.hot .title{
+				width: 100%;
+				height: 30px;
+				position:relative;
+				top: 0;
+			}
+			.hot .title h2{
+				height: 30px;
+				width:200px;
+				text-align: center;
+				line-height: 30px;
+				font-size: 30px;
+				background: white;
+				position: absolute;
+				left: 50%;margin-left: -100px;
+				z-index: 2;
+			}
+			.hot .title span{
+				position: absolute;
+				top: 50%;left: 0;
+				width: 100%;
+				height: 1px;
+				background:#b7b7b7;
+				border: none;
+			}
+			.hot .hot_top{
+				width: 100%;
+				height: 270px;
+				position: relative;
+				border-bottom: 1px solid #b7b7b7;
+			}
+			.hot .hot_top li{
+				float: left;
+			}
+			.hot .hot_top li a{
+				text-align: center;
+				display: block;
+				width:240px;
+				height: 1005;
+			}
+			.hot .hot_top li a h2{
+				margin: 20px 0;
+				font-size: 22px;
+			}
+			.hot .hot_top .sanjiao{
+				position: absolute;
+				bottom:-21px;
+				left: 100px;
+				
+			}
+			.hot .list{
+				width: 100%;
+				height: 750px;
+				position: relative;
+				box-sizing: border-box;
+			}
+			.hot .list ul{
+				position: absolute;
+				height: auto;
+				display: none;
+			}
+			.hot .list .boy{
+				display:block;
+			}
+			.hot .list hr{
+				width: 100%;
+				height: 1px;
+				background: #b7b7b7;
+				border: none;
+			}
+			.hot .list li{
+				width: 248px;
+				height: 300px;
+				float: left;
+				margin-top: 30px;
+				margin-bottom: 20px;
+				margin-left: 1px;
+				text-align: center;
+				box-sizing: border-box;
+			}
+			.hot .list li:hover{
+				border: 1px solid #b7b7b7;
+			}
+			.hot .list li h6{
+				margin: 10px 0;
+				font-weight: bold;
+			}
+			.hot .list li img{
+				width: 165px;
+				height: 165px;
+			}
+			.hot .list .btn{
+				position: absolute;
+				bottom: 0;left: 50%;margin-left: -210px;
+				width: 420px;
+				height: 48px;
+				background:black;
+				color: white;
+				font-size: 16px;
+				text-align: center;
+				line-height:48px;
+				transition: all 0.2s;
+				box-sizing: border-box;
+			}
+			.hot .list .btn i{
+				width: 20px;
+				height: 30px;
+				position: absolute;
+				right: 80px;top:10px;
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -7px -162px;
+				box-sizing: border-box;
+			}
+			.new{
+				width: 1000px;
+				height: auto;
+				margin: 0 auto;
+			}
+			.new .title{
+				width: 100%;
+				height: 30px;
+				position:relative;
+				top: 0;
+			}
+			.new .title h2{
+				height: 30px;
+				width:200px;
+				text-align: center;
+				line-height: 30px;
+				font-size: 30px;
+				background: white;
+				position: absolute;
+				left: 50%;margin-left: -100px;
+				z-index: 2;
+			}
+			.new .title span{
+				position: absolute;
+				top: 50%;left: 0;
+				width: 100%;
+				height: 1px;
+				background:#b7b7b7;
+				border: none;
+			}
+			.new ul{
+				height: auto;
+				overflow: hidden;
+			}
+			.new ul li{
+				width: 248px;
+				height: 300px;
+				float: left;
+				margin-top: 30px;
+				margin-bottom: 20px;
+				margin-left: 1px;
+				text-align: center;
+				box-sizing: border-box;
+			}
+			.new ul li:hover{
+				border: 1px solid #b7b7b7;
+			}
+			.new ul li h6{
+				margin: 10px 0;
+				font-weight: bold;
+			}
+			.new ul li img{
+				width: 165px;
+				height: 165px;
+			}
+			.new ul hr{
+				width: 100%;
+				height: 1px;
+				background: #b7b7b7;
+				border: none;
+			}
+			.street{
+				width: 1000px;
+				height:612px;
+				margin: 50px auto;
+				position: relative;
+			}
+			.street .title{
+				background:black;
+				color: white;
+				width: 100%;
+				height: 40px;
+				font-size: 18px;
+				box-sizing: border-box;
+				line-height: 40px;
+			}
+			.street .title img{
+				margin-left: 20px;
+			}
+			.street .title span{
+				display: inline-block;
+				margin-left: 10px;
+			}
+			.street .box{
+				width: 488px;
+				height: 552px;
+				position:absolute;
+				top: 70px;
+			}
+			.street .left{left: 0;}
+			.street .right{right:0;}
+			.street .box .a1{
+				position: relative;
+				display: block;
+				width: 488px;
+				height: 366px;
+			}
+			.street .box .a1 img{
+				position: absolute;
+			}
+			.street .box h3{
+				font-size: 20px;
+				font-weight: bold;
+			}
+			.street .box p{
+				height: auto;
+				line-height: 20px;
+				margin-top: 10px;
+			}
+			.street .box .btn{
+				position:absolute;
+				bottom: 0;left:0;
+				width: 197px;
+				height: 50px;
+				background:black;
+				color: white;
+				font-size: 16px;
+				text-align: center;
+				line-height:50px;
+				transition: all 0.2s;
+				box-sizing: border-box;
+			}
+			.street .box .btn i{
+				width: 20px;
+				height: 30px;
+				position: absolute;
+				right: 40px;top:10px;
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -7px -162px;
+				box-sizing: border-box;
+			}
+			/*----------------------------*/
+			.fashion{
+				width: 1000px;
+				height: 480px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.fashion .title{
+				background: black;
+				color: white;
+				width: 100%;
+				height: 40px;
+				font-size: 18px;
+				box-sizing: border-box;
+				line-height: 40px;
+			}
+			.fashion .title img{
+				margin-left: 20px;
+			}
+			.fashion .title span{
+				display: inline-block;
+				margin-left: 10px;
+			}
+			.fashion .box{
+				position: relative;
+				width: 320px;
+				height: auto;
+				float: left;
+				margin-top: 20px;
+			}
+			.fashion .middle{
+				margin-left: 20px;
+			}
+			.fashion .right{
+				margin-left: 20px;
+			}
+			.fashion .box .a1{
+				position: relative;
+				display: block;
+				width: 320px;
+				height: 240px;
+			}
+			.fashion .box .a1 img{
+				position: absolute;
+			}
+			.fashion .box h3{
+				font-size: 20px;
+				font-weight: bold;
+			}
+			.fashion .box p{
+				height: auto;
+				line-height: 20px;
+				margin-top: 10px;
+			}
+			.fashion .box .btn{
+				display: block;
+				width: 197px;
+				height: 50px;
+				background:black;
+				color: white;
+				font-size: 16px;
+				text-align: center;
+				line-height:50px;
+				transition: all 0.2s;
+				box-sizing: border-box;
+			}
+			.fashion .box .btn i{
+				width: 20px;
+				height: 30px;
+				position: absolute;
+				right: 40px;top:10px;
+				background:url(img/sprites_header_footer.png) no-repeat;
+				background-position: -7px -162px;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<img class="liaoliaoba" src="http://chat8.live800.com/live800/SurferServer?cmd=111&companyID=93082&online=http%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D93082%26fna%3D146469663659893082&offline=http%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D93082%26fna%3D146469769152493082&tm=1526134801970"/>
+		<div class="space" style="height: 130px;"></div>
+		<div class="top"></div>
+		<div class="notice">
+			<a href="#">
+				尊敬的顾客您好，我们店铺是不会泄露您的消费信息的，请放心。另外我们也不会要求获取、收集、使用任何与消费者金融消费类（如：信用卡）信息，如果接到以上信息电话，是属于诈骗电话，请勿相信，以防钱财损失。如您对订单有疑问，请联系在线客服。
+			</a>
+		</div>
+		<div class="lbt">
+			<span class="prev"><i></i></span>
+			<span class="next"><i></i></span>
+			<ul class="img">
+				<li><img src="img/offwhite-180507.jpg"/></li>
+				<li><img src="img/miley-cyrus-180502.jpg"/></li>
+				<li><img src="img/chuck70-F2-180426.jpg"/></li>
+				<li><img src="img/onestar-180501.jpg"/></li>
+				<li><img src="img/DAINTY-180501.jpg"/></li>
+				<li><img src="img/tee-180501.jpg"/></li>
+			</ul>
+			
+			<ul class="list">
+				<li>Virgil Abloh</li>
+				<li>Miley Cyrus</li>
+				<li>Chuck 70</li>
+				<li>One Star</li>
+				<li>女生挚爱</li>
+				<li>穿搭必备</li>
+			</ul>
+		</div>
+		<a href="#" class="div1"><img src="img/lookbook-180508.jpg"/></a>
+		<!--热卖单品------------------------------------------------------>
+		<div class="hot">
+			<div class="title">
+				<h2>热卖单品</h2>
+				<span></span>
+			</div>
+			<ul class="hot_top">
+				<li><a>
+					<h2>男的踩得</h2>
+					<img src="img/top_02_1203.jpg"/>
+				</a></li>
+				<li><a>
+					<h2>女的踩得</h2>
+					<img src="img/top_01_1203.jpg"/>
+				</a></li>
+				<li><a>
+					<h2>穿的</h2>
+					<img src="img/top_01_05.jpg" />
+				</a></li>
+				<li><a>
+					<h2>戴的</h2>
+					<img src="img/top_01_07.jpg"/>
+				</a></li>
+				<img src="img/active.png" class="sanjiao"/>
+			</ul>
+			<div class="list">
+				<ul class="boy">
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<hr />
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+				</ul>
+				<ul class="girl">
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<hr />
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+				</ul>
+				<ul class="chuande">
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<hr />
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+				</ul>
+				<ul class="daide">
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<hr />
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+				</ul>
+				<a href="#" class="btn"><span>查看所有男的踩得所有商品</span><i></i></a>
+			</div>
+		</div>
+		<!--新品推荐-------------------------------------------------->
+		<div class="new">
+			<div class="title">
+				<h2>新品推荐</h2>
+				<span></span>
+			</div> 
+				<ul>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<hr />
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+					<li>
+						<a href="#">
+							<img src="http://image.converse.com.cn/resources/product/161374C442/161374C442_1B_NEW.png?201805091749"/>
+							<h6>【男女同款】Chuck Taylor All Star高帮</h6>
+						</a>
+						<span>￥668.00</span>
+					</li>
+				</ul>
+		</div>
+		<!--街头先型-------------------------------------------------->
+		<div class="street">
+			<div class="title">
+				<img src="http://image.converse.com.cn/static/home/logo-icon.png"/>
+				<span>街头先型</span>
+			</div>
+			<div class="box left">
+				<a href="#" class="a1"><img src="img/HPTouts-chuck70-180501.jpg"/></a>
+				<h3>CHUCK 70</h3>
+				<p>Chuck Taylor All Star’70延续70鞋款的经典鞋型设计，偏窄鞋头与修长鞋型上脚优雅显瘦。同时鞋面采用舒适强韧的帆布材料，提升了品质感。沿用至今的复古大鞋舌，不对称鞋头挡泥板与光亮的鞋围条细节，加厚海绵鞋垫提升了舒适度。</p>
+				<a href="#" class="btn"><span>查看更多</span><i></i></a>
+			</div>
+			<div class="box right">
+				<a href="#" class="a1"><img src="img/HPTouts-onestar-180501.jpg"/></a>
+				<h3>ONE STAR</h3>
+				<p>经典款“ONE STAR”款式，鞋面采用纺织织物材质，自然优雅，从视觉上放松人们的心情。融入SKATE元素，源于纽约街头设计灵感，呈现出舒适的穿着体验，行走舒适自如，让你尽享运动中的乐趣。</p>
+				<a href="#" class="btn"><span>查看更多</span><i></i></a>
+			</div>
+		</div>
+		<!--至酷精选 玩转潮流-------------------------------------------------->
+		<div class="fashion">
+			<div class="title">
+				<img src="http://image.converse.com.cn/static/home/logo-icon.png"/>
+				<span>至酷精选 玩转潮流</span>
+			</div>
+			<div class="box left">
+				<a href="#" class="a1"><img src="http://image.converse.com.cn/static/touts/BottomTouts-jp-180501.jpg"/></a>
+				<h3>CHUCK 70</h3>
+				<p>Chuck Taylor All Star’70延续70鞋款的经典鞋型设计，偏窄鞋头与修长鞋型上脚优雅显瘦。同时鞋面采用舒适强韧的帆布材料，提升了品质感。沿用至今的复古大鞋舌，不对称鞋头挡泥板与光亮的鞋围条细节，加厚海绵鞋垫提升了舒适度。</p>
+				<a href="#" class="btn"><span>查看更多</span><i></i></a>
+			</div>
+			<div class="box middle">
+				<a href="#" class="a1"><img src="http://image.converse.com.cn/static/touts/BottomTouts-tee-180501.jpg"/></a>
+				<h3>CHUCK 70</h3>
+				<p>Chuck Taylor All Star’70延续70鞋款的经典鞋型设计，偏窄鞋头与修长鞋型上脚优雅显瘦。同时鞋面采用舒适强韧的帆布材料，提升了品质感。沿用至今的复古大鞋舌，不对称鞋头挡泥板与光亮的鞋围条细节，加厚海绵鞋垫提升了舒适度。</p>
+				<a href="#" class="btn"><span>查看更多</span><i></i></a>
+			</div>
+			<div class="box right">
+				<a href="#" class="a1"><img src="http://image.converse.com.cn/static/touts/BottomTouts-bag-180501.jpg"/></a>
+				<h3>ONE STAR</h3>
+				<p>经典款“ONE STAR”款式，鞋面采用纺织织物材质，自然优雅，从视觉上放松人们的心情。融入SKATE元素，源于纽约街头设计灵感，呈现出舒适的穿着体验，行走舒适自如，让你尽享运动中的乐趣。</p>
+				<a href="#" class="btn"><span>查看更多</span><i></i></a>
+			</div>
+		</div>
+		
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lunbo.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/buttonhover.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mask.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+//轮播图------------------------------------
+			$(".lbt").banner(".lbt","fade");
+//热卖单品--------------------------------
+			$.each($(".hot_top li"),function(index,item){
+				$(item).mouseenter(function(){
+					$(".hot_top .sanjiao")
+					.stop()
+					.animate({
+						left:((index+1)*240-120-20)+"px"
+					})
+					$(".hot .list ul").hide();
+					$(".hot .list ul").eq(index).fadeIn(1000);
+					switch(index){
+						case 0:$(".hot .list .btn span").text("查看所有男的踩得所有商品");break;
+						case 1:$(".hot .list .btn span").text("查看所有女的踩得所有商品");break;
+						case 2:$(".hot .list .btn span").text("查看所有穿得所有商品");break;
+						case 3:$(".hot .list .btn span").text("查看所有戴得所有商品");break;
+					}
+				})
+			})
+			$(".hot").buttonhover(".hot .list .btn");
+//街头先型--------------------------------
+			$(".street").Mask(".street .left .a1");
+			$(".street").Mask(".street .right .a1");
+			$(".street").buttonhover(".street .left .btn");
+			$(".street").buttonhover(".street .right .btn");
+		</script>
+	</body>
+</html>
