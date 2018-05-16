@@ -1,37 +1,23 @@
-;+function($){
-	$.fn.Mask=function(selector){
-		new mask(selector);
+//鼠标进入selector时,为selector1加上蒙版
+function mask(selector){
+	this.init(selector)
+}
+mask.prototype={
+	constructor:mask,
+	init(selector){
+				this.ele=$(selector);
+				this.width=$(this.ele).width();
+				this.height=$(this.ele).height();
+				var div=$("<div class='mask'></div>");
+				this.ele.append(div);
+				div.css({
+					width:this.width+"px",
+					height:this.height+"px",
+					position:"absolute",
+					top:0,
+					background:"black",
+					"z-index":888,
+					opacity:0.5
+				})
+			}
 	}
-	
-	function mask(selector){
-		this.init(selector)
-	}
-	mask.prototype={
-		constructor:mask,
-		init(selector){
-			this.ele=$(selector);
-			this.width=$(this.ele).width();
-			this.height=$(this.ele).height();
-			
-			this.ele.hover(
-				function(){
-					this.div=$("<div class='mask'></div>");
-					this.ele.append(this.div);
-					$(".mask").css({
-						width:this.width+"px",
-						height:this.height+"px",
-						position:"absolute",
-						top:0,
-						background:"black",
-						"z-index":999,
-						opacity:0.3
-					})	
-				}.bind(this),
-				function(){
-					$(".mask").remove();
-				}
-			)
-			
-		}
-	}
-}(jQuery)
