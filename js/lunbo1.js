@@ -1,13 +1,9 @@
-;+function(factory){
-if(typeof define === "function" && define.amd){
-   define(["jquery"],factory)
-    }else{
-        factory(jQuery);
-    }
++function(factory){
+	define(["jquery"],factory)
 }(function($){
-	$.fn.banner=function(lbt,animation){
-		new lunbo(lbt,animation);
-	}
+//	$.fn.banner=function(lbt,animation){
+//		new lunbo(lbt,animation);
+//	}
 	function lunbo(lbt,animation){
 			this.animation=animation;
 			this.lbt=$(lbt);
@@ -130,10 +126,9 @@ if(typeof define === "function" && define.amd){
 				//下标
 			}
 		}
+//	$.banner = lunbo;
+    return lunbo;
 })
-//	;+function($){
-//}(jQuery)
-
 
 
 

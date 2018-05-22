@@ -1,0 +1,21 @@
+			/*body{overflow-x:hidden;}*/
+			*{
+				padding: 0;margin: 0;
+			}
+			a{text-decoration:none; color:#333;}
+			h1,h3,h4,h2,h5,h6,b,strong{font-weight:normal;}
+			i,em{font-style:normal;}
+			li{list-style:none;}
+			a,img,span{outline:none;cursor: pointer;}
+			input{outline:none;}
+			body{font:12px "微软雅黑";height:auto;width:100%;}
+			a:hover{
+				/*border-bottom: 1px solid white;*/
+			}
+			.liaoliaoba{
+				display: block;
+				position:absolute;
+				right: 0;
+				top: 200px;
+				z-index: 999;
+			}

@@ -3,7 +3,6 @@ window.onscroll=function(){
 		if(scrolltop>200){
 			$(".top").css({
 				"height":80,
-//				"display":"none"
 			});
 			$(".header .denglu").css("line-height","50px");
 			$(".header .gwc").css("line-height","50px");
@@ -12,8 +11,6 @@ window.onscroll=function(){
 				"line-height":"30px"
 				});
 			$(".top .list ul li a i").hide();
-			
-//			$(".top").slideDown("fast");
 			
 		}
 		else{
@@ -34,5 +31,5 @@ window.onscroll=function(){
 		.stop(true)
 		.animate({
 			"top":scrolltop+200+"px"
-		},1000)
+		},500)
 }

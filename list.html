@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="css/list.css"/>
+	</head>
+	<body>
+		<img class="liaoliaoba" src="img/CustomFileDownloadServer.gif"/>
+		<div class="space" style="height: 130px;"></div>
+		<div class="top">
+			<div class="header">
+				<a class="logo"></a>
+				<div class="denglu">
+					<span class="login">登录</span>
+					<span style="padding: 0 3px;">/</span>
+					<span class="register">注册</span>
+					<span class="s1"></span>
+					<span class="sanjiao"></span>
+				</div>
+				<div class="gwc">
+					<span>购物车</span>
+					<span class="carrnum">0</span>
+				</div>
+				<div class="lt">
+					<span class="liaotian"></span>
+				</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+				<div class="ss">
+					<span class="search"></span>
+				</div>
+				<div class="wt">
+					<span class="wenti"></span>
+				</div>
+			</div>
+			<div class="hidden_interface">
+				<!--搜索界面-->
+				<div class="ss_interface">
+						<input type="text" placeholder="想找什么随便搜"/>
+						<div class="btn">
+							<span class="search_btn"></span>
+							<span class="close_btn"></span>
+						</div>
+				</div>
+				<!--登录注册界面-->
+				<div class="login_register">
+					<div class="box login_interface">
+						<div class="left">
+							<h2>还未注册？</h2>
+							<a href="#" class="register"><span>注册账户</span><i></i></a>
+						</div>
+						<div class="middle">
+							<h2>您可以直接登录</h2>
+							<ul>
+								<li><a href="#" class="weibo"></a></li>
+								<li><a href="#" class="qq"></a></li>
+								<li><a href="#" class="renren"></a></li>
+								<li><a href="#" class="zhifubao"></a></li>
+							</ul>
+							
+						</div>
+						<div class="right">
+							<h2>已经成为会员？</h2>
+							<form>
+								<input type="text" id="user" placeholder="邮箱/手机"/>
+								<input type="password" id="pwd" placeholder="账户密码"/>
+								<input type="text"  placeholder="请输入验证码" id="verification"/>
+								<a href="#"><img src="img/botdetectcaptcha.jpg"/></a>
+								<a href="#" class="change">换一张？</a>
+								<p>一旦登录，即表明你同意匡威的法律声明和使用规则</p>
+								<button id="login"><span>登录</span><i></i></button>
+								<input type="checkbox" class="checkbox"/><span style="position: relative;top: -3px;left: 5px;">保持登录状态</span>
+							</form>
+						</div>
+						
+					</div>
+					<div class="box register_interface">
+					<ul>
+						<li>
+							<h3>手机号码</h3>
+							<input type="text" placeholder="173xxxx3062" class="phone"/>
+							<span>请输入11位有效中国手机号码！</span>
+						</li>
+						<li>
+							<h3>邮箱</h3>
+							<input type="text" placeholder="469809523@qq.com" class="email"/>
+							<span>请输入正确的邮箱！</span>
+						</li>
+						<li class="sex">
+							<h3>性别</h3>
+							<input type="radio" placeholder="" class="checkbox" name="sex"/>
+							<em>男的</em>
+							<input type="radio" placeholder="" class="checkbox" name="sex"/>
+							<em>女的</em> 
+						</li>
+						<li>
+							<h3>输入密码</h3>
+							<input type="text" placeholder="密码至少为6位字符" class="pwd"/>
+							<span>请输入正确的密码！</span>
+						</li>
+						<li>
+							<h3>确认密码</h3>
+							<input type="text" placeholder="请再次输入密码" class="pwd2"/>
+							<span>抱歉两次输入的密码不匹配！</span>
+						</li>
+						<li>
+							<h3>生日（年-月-日）</h3>
+							<div class="select year">
+								<div class="text_right">
+									<span>1998</span>
+									<i></i>
+									<select class="size">
+										<option>1998</option>
+										<option>1999</option>
+										<option>2000</option>
+										<option>2001</option>
+										<option>2002</option>
+										<option>2003</option>
+										<option>2004</option>
+										<option>2005</option>
+									</select>
+								</div>
+							</div>
+							<div class="select month">
+								<div class="text_right">
+									<span>1</span>
+									<i></i>
+									<select class="size">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+									</select>
+								</div>
+							</div>
+							<div class="select day">
+								<div class="text_right">
+									<span>1</span>
+									<i></i>
+									<select class="size">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+									</select>
+								</div>
+							</div>
+						</li>
+						<li>
+							<h3>验证码</h3>
+							<input type="text" id="verification1" placeholder="请输入验证码"/>
+							<a href="#" style="position: relative;top: 15px;left: 20px;"><img src="img/botdetectcaptcha.jpg"/></a>
+							<a href="#" style="position: absolute;bottom:10px;right: 0;">换一张？</a>
+						</li>
+						<li>
+							<h3>短信验证码</h3>
+							<input type="text" id="duanxin"/>
+							<a href="#" class="send">发送短信验证码</a>
+						</li>
+						<li>
+							<h6>一旦登录，即表明你同意匡威的法律声明和使用规则</h6>
+							<button type="submit" id="register"><em>注册账户</em><i></i></button>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<!--隐藏购物车界面-->
+				<div class="header_cart">
+					<i class="close_cart"></i>
+					<div class="left">
+						<img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_1M_NEW.png"/>
+					</div>
+					<div class="middle">
+						<h1>已加入购物车</h1>
+						<h2>
+							<span>【女的】Chuck Taylor All Star Dainty</span>
+							<i>￥399.00</i>
+						</h2>
+						<p>
+							型号：537213c001
+							<br />
+							颜色：黑色
+							<br />
+							尺码：37
+							<br />
+							数量：1
+						</p>
+					</div>
+					<div class="right">
+						<h2>
+							<span>合计：</span>
+							<i>399.00</i>
+						</h2>
+						<a class="money_btn">￥结算</a>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<ul>
+					<li><a href="#">男的<i></i></a></li>
+					<li><a href="#">女的<i></i></a></li>
+					<li><a href="#">儿童<i></i></a></li>
+					<li><a href="#">型人搭配<i></i></a></li>
+					<li><a href="#">店铺分布<i></i></a></li>
+				</ul>
+				<div class="item">
+					<ul class="u1">
+						<li><img src="http://image.converse.com.cn/static/home/nav/M_B_FTW.jpg?201805091749"/><span>踩得</span></li>
+						<li><img src="http://image.converse.com.cn/static/home/nav/M_B_APP.jpg?201805091749"/><span>踩得</span></li>
+						<li><img src="http://image.converse.com.cn/static/home/nav/M_B_TEE.jpg?201805091749"/><span>踩得</span></li>
+						<li><img src="http://image.converse.com.cn/static/home/nav/M_B_ACC.jpg?201805091749"/><span>踩得</span></li>
+						<li><img src="http://image.converse.com.cn/static/home/nav/new_icon.jpg?201805091749"/><span>踩得</span></li>
+						<li><img src="http://image.converse.com.cn/static/home/nav/discount_icon.jpg?201805091749"/><span>踩得</span></li>
+					</ul>
+					<hr/>
+					<ul class="u2">
+						<li><img src="img/top_02_1203.jpg"/><span>踩得</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+<!------------------------------------------------------------------------------------------>
+		
+		<div class="content">
+			<div class="title">
+				<h2>男的/43件产品</h2>
+				<span></span>
+			</div>
+			<div class="wrap">
+				<div class="left">
+					<div class="div1">
+						<h3>筛选</h3>
+						<ul>
+						</ul>
+						<span></span>
+					</div>
+					
+					<ul class="div2">
+					  <li>
+					  	<span  class="plus">系列</span>
+					  	<ul class="item">
+					  		<li>CHUCK 70</li>
+					  		<li>ONE STAR</li>
+					  		<li>Jack Purcell</li>
+					  		<li>Chuck Talor All Star</li>
+					  		<li>CONS</li>
+					  	</ul>
+					  </li>
+					  
+					  <li>
+					  	<span class="plus">季节</span>
+					  	<ul class="item">
+					  		<li>春季</li>
+					  		<li>夏季</li>
+					  		<li>秋季</li>
+					  		<li>冬季</li>
+					  	</ul>
+					  </li>
+					 
+					  <li>
+					  	<span class="plus">儿童</span>
+					  	<ul class="item">
+					  		<li>儿童</li>
+					  	</ul>
+					  </li>
+					  
+					  <li>
+					  	<span class="plus">产品分类</span>
+					  	<ul class="item">
+					  		<li>踩得</li>
+					  		<li>穿的</li>
+					  		<li>戴的</li>
+					  	</ul>
+					  </li>
+					  <li>
+					  	<span class="plus">价格</span>
+					  	<ul class="item">
+					  		<li>0-299</li>
+					  		<li>300-399</li>
+					  		<li>400-499</li>
+					  		<li>500-599</li>
+					  		<li>600-699</li>
+					  		<li>700-799</li>
+					  		<li>800-899</li>
+					  	</ul>
+					  </li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="sort">
+						<span>排序</span>
+						<ul>
+							<li>默认</li>
+							<li>价格</li>
+							<li>最喜欢</li>
+							<li>最畅销</li>
+						</ul>
+					</div>
+					<ul class="item">
+						<!--<li>
+							<img src="http://image.converse.com.cn/resources/product/162235C102/162235C102_1M_NEW.png?201805162234"/>
+							<h3> 【男女同款】Converse x Miley Cyrus Chuck Taylor All Star</h3>
+							<p>￥499.00</p>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+<!------------------------------------------------------------------------------------------>		
+		<div class="footer"></div>
+		
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/scroll.js" ></script>
+<script src="js/lunbo.js" ></script>
+<script src="js/buttonhover.js" ></script>
+<script src="js/mask.js" ></script>
+<script src="js/login_register.js" ></script>
+<script src="js/top.js"></script>
+	
+	<script type="text/javascript">
+			$(".footer").load("footer.html");
+//左菜单----------------------------------------------------------------
+			function erji(selector){
+				this.ele=$(selector);
+				this.oli=this.ele.children();
+				this.oli2=this.ele.find(".item").children();
+				this.init();
+			}
+			erji.prototype={
+				constructor:erji,
+				init(){
+					var _this=this;
+					$.each(this.oli,function(index,item){
+						$(item).find("span").click(function(){
+							_this.animate($(item).find("ul"));
+						})
+					});
+					$.each(this.oli2,function(index,item){
+						$(item).click(function(){
+							var ele=$("<li></li>");
+							ele.text($(item).text());
+							$(".wrap .div1 ul").append(ele);
+							_this.animate($(item).parent());
+						})
+					}); 
+				},
+				animate(ele){
+					ele.slideToggle(function(){
+						ele.siblings()
+						.toggleClass("minus")
+						.toggleClass("plus");
+					});
+				}
+			}
+			new erji(".div2");
+//右列表-----------------------------------------------------------------------------
+			function waterfall(url,main){
+				if(!url||!main) return;
+				this.url=url;
+				this.main=$(main);
+				this.init();
+			}
+			waterfall.prototype={
+				constructor:waterfall,
+				init(){
+					this.load_data()
+					.then(function(res){
+						this.json=res;
+						this.render();
+					}.bind(this))
+				},
+				load_data(){//加载数据
+					var opt={
+						url:this.url
+					}
+					return $.ajax(opt);
+				},
+				render(){//渲染界面
+					this.html="";
+					this.json.forEach(function(item){
+						this.html+=`
+						<li>
+							<img src=${item.img}/>
+							<h3>${item.name}</h3>
+							<p>${item.parce}</p>
+						</li>
+						`
+					}.bind(this));
+					this.main.html(this.main.html()+this.html);
+				},
+				sort(){//排序
+					
+				}
+			}
+			new waterfall("data/list.json",".wrap .right .item");
+		</script>
+	</body>
+</html>

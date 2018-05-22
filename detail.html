@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+	</head>
+	<body>
+		<img class="liaoliaoba" src="img/CustomFileDownloadServer.gif"/>
+		<div class="space" style="height: 130px;"></div>
+		<div class="top">
+			<div class="header">
+				<a class="logo"></a>
+				<div class="denglu">
+					<span class="login">登录</span>
+					<span style="padding: 0 3px;">/</span>
+					<span class="register">注册</span>
+					<span class="s1"></span>
+					<span class="sanjiao"></span>
+				</div>
+				<div class="gwc">
+					<span>购物车</span>
+					<span class="carrnum">0</span>
+				</div>
+				<div class="lt">
+					<span class="liaotian"></span>
+				</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+				<div class="ss">
+					<span class="search"></span>
+				</div>
+				<div class="wt">
+					<span class="wenti"></span>
+				</div>
+			</div>
+			<div class="hidden_interface">
+				<!--搜索界面-->
+				<div class="ss_interface">
+						<input type="text" placeholder="想找什么随便搜"/>
+						<div class="btn">
+							<span class="search_btn"></span>
+							<span class="close_btn"></span>
+						</div>
+				</div>
+				<!--登录注册界面-->
+				<div class="login_register">
+					<div class="box login_interface">
+						<div class="left">
+							<h2>还未注册？</h2>
+							<a href="#" class="register"><span>注册账户</span><i></i></a>
+						</div>
+						<div class="middle">
+							<h2>您可以直接登录</h2>
+							<ul>
+								<li><a href="#" class="weibo"></a></li>
+								<li><a href="#" class="qq"></a></li>
+								<li><a href="#" class="renren"></a></li>
+								<li><a href="#" class="zhifubao"></a></li>
+							</ul>
+							
+						</div>
+						<div class="right">
+							<h2>已经成为会员？</h2>
+							<form>
+								<input type="text" id="user" placeholder="邮箱/手机"/>
+								<input type="password" id="pwd" placeholder="账户密码"/>
+								<input type="text"  placeholder="请输入验证码" id="verification"/>
+								<a href="#"><img src="img/botdetectcaptcha.jpg"/></a>
+								<a href="#" class="change">换一张？</a>
+								<p>一旦登录，即表明你同意匡威的法律声明和使用规则</p>
+								<button id="login"><span>登录</span><i></i></button>
+								<input type="checkbox" class="checkbox"/><span style="position: relative;top: -3px;left: 5px;">保持登录状态</span>
+							</form>
+						</div>
+						
+					</div>
+					<div class="box register_interface">
+					<ul>
+						<li>
+							<h3>手机号码</h3>
+							<input type="text" placeholder="173xxxx3062" class="phone"/>
+							<span>请输入11位有效中国手机号码！</span>
+						</li>
+						<li>
+							<h3>邮箱</h3>
+							<input type="text" placeholder="469809523@qq.com" class="email"/>
+							<span>请输入正确的邮箱！</span>
+						</li>
+						<li class="sex">
+							<h3>性别</h3>
+							<input type="radio" placeholder="" class="checkbox" name="sex"/>
+							<em>男的</em>
+							<input type="radio" placeholder="" class="checkbox" name="sex"/>
+							<em>女的</em> 
+						</li>
+						<li>
+							<h3>输入密码</h3>
+							<input type="text" placeholder="密码至少为6位字符" class="pwd"/>
+							<span>请输入正确的密码！</span>
+						</li>
+						<li>
+							<h3>确认密码</h3>
+							<input type="text" placeholder="请再次输入密码" class="pwd2"/>
+							<span>抱歉两次输入的密码不匹配！</span>
+						</li>
+						<li>
+							<h3>生日（年-月-日）</h3>
+							<div class="select year">
+								<div class="text_right">
+									<span>1998</span>
+									<i></i>
+									<select class="size">
+										<option>1998</option>
+										<option>1999</option>
+										<option>2000</option>
+										<option>2001</option>
+										<option>2002</option>
+										<option>2003</option>
+										<option>2004</option>
+										<option>2005</option>
+									</select>
+								</div>
+							</div>
+							<div class="select month">
+								<div class="text_right">
+									<span>1</span>
+									<i></i>
+									<select class="size">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+									</select>
+								</div>
+							</div>
+							<div class="select day">
+								<div class="text_right">
+									<span>1</span>
+									<i></i>
+									<select class="size">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+									</select>
+								</div>
+							</div>
+						</li>
+						<li>
+							<h3>验证码</h3>
+							<input type="text" id="verification1" placeholder="请输入验证码"/>
+							<a href="#" style="position: relative;top: 15px;left: 20px;"><img src="img/botdetectcaptcha.jpg"/></a>
+							<a href="#" style="position: absolute;bottom:10px;right: 0;">换一张？</a>
+						</li>
+						<li>
+							<h3>短信验证码</h3>
+							<input type="text" id="duanxin"/>
+							<a href="#" class="send">发送短信验证码</a>
+						</li>
+						<li>
+							<h6>一旦登录，即表明你同意匡威的法律声明和使用规则</h6>
+							<button type="submit" id="register"><em>注册账户</em><i></i></button>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<!--隐藏购物车界面-->
+				<div class="header_cart">
+					<i class="close_cart"></i>
+					<div class="left">
+						<img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_1M_NEW.png"/>
+					</div>
+					<div class="middle">
+						<h1>已加入购物车</h1>
+						<h2>
+							<span>【女的】Chuck Taylor All Star Dainty</span>
+							<i>￥399.00</i>
+						</h2>
+						<p>
+							型号：537213c001
+							<br />
+							颜色：黑色
+							<br />
+							尺码：37
+							<br />
+							数量：1
+						</p>
+					</div>
+					<div class="right">
+						<h2>
+							<span>合计：</span>
+							<i>399.00</i>
+						</h2>
+						<a class="money_btn">￥结算</a>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<ul>
+					<li><a href="#">男的<i></i></a></li>
+					<li><a href="#">女的<i></i></a></li>
+					<li><a href="#">儿童<i></i></a></li>
+					<li><a href="#">型人搭配<i></i></a></li>
+					<li><a href="#">店铺分布<i></i></a></li>
+				</ul>
+				<div class="item">
+					<ul class="u1">
+						<li><img src="http://image.converse.com.cn/static/home/nav/M_B_FTW.jpg?201805091749"/><span>踩得</span></li>
+						<li><img src="http://image.converse.com.cn/static/home/nav/M_B_APP.jpg?201805091749"/><span>踩得</span></li>
+						<li><img src="http://image.converse.com.cn/static/home/nav/M_B_TEE.jpg?201805091749"/><span>踩得</span></li>
+						<li><img src="http://image.converse.com.cn/static/home/nav/M_B_ACC.jpg?201805091749"/><span>踩得</span></li>
+						<li><img src="http://image.converse.com.cn/static/home/nav/new_icon.jpg?201805091749"/><span>踩得</span></li>
+						<li><img src="http://image.converse.com.cn/static/home/nav/discount_icon.jpg?201805091749"/><span>踩得</span></li>
+					</ul>
+					<hr/>
+					<ul class="u2">
+						<li><img src="img/top_02_1203.jpg"/><span>踩得</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!------------------------------------------------------------------->
+		<div class="content">
+			<div class="left">
+				<div class="share">
+					<i></i>
+					<span>分享</span>
+				</div>
+				
+				<div class="favorite">
+					<i></i>
+					<span>加入收藏</span>
+				</div>
+				
+				<div class="comment">
+					<a></a>
+				</div>
+			</div>
+			<div class="middle">
+				<div class="name">
+					<h2>【女的】Chuck Taylor All Star Dainty</h2>
+					<p>价格　￥399.00</p>
+				</div>
+				<div class="img">
+					<!--<div class="wrap"></div>-->
+					<img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_1H_NEW.png?201805162234"/>
+					<span class="pop"></span>
+				</div>
+				
+				<div class="big">
+					<img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_1L_NEW.png?201805162234"/>
+				</div>
+				
+				<ul class="list">
+					<li>
+						<img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_1S_NEW.png?201805162234"/>
+					</li>
+					<li>
+						<img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_2S_NEW.png?201805162234"/>
+					</li>
+					<li>
+						<img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_3S_NEW.png?201805162234"/>
+					</li>
+					<li>
+						<img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_4S_NEW.png?201805162234"/>
+					</li>
+					<li>
+						<img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_5S_NEW.png?201805162234"/>
+					</li>
+					<li>
+						<img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_6S_NEW.png?201805162234"/>
+					</li>
+				</ul>
+				<p>鞋面选用帆布材质，薄底款式，经典配色。</p>
+				<h3>价格说明（此说明仅当出现价格比较时有效）</h3>
+				<p>划线价格：划线的价格可能是商品的专柜吊牌价或正品零售价指导价或该商品的曾经展示过的销售价等，仅供您参考。
+					<br />
+					未划线价格：未划线的价格是商品在官网上的销售标价，具体的成交价格可能因为会员使用优惠券发生变化，最终以订单结算页价格为准。
+				</p>
+				<a href="#">
+					Chuck Taylor All Star
+				</a>
+			</div>
+			<div class="right">
+				<ul class="list">
+					<li><img src="http://image.converse.com.cn/resources/product/537216C100/537216C100_1S_NEW.png?201805162235"/></li>
+					<li><img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_1S_NEW.png?201805162235"/></li>
+				</ul>
+				<div class="info">
+					色：黑色<br />型号：469809523
+				</div>
+				<div class="pop">
+					<i></i>
+					<span>尺码对照表</span>
+				</div>
+				<div class="select">
+					<span>请输入你的尺码</span>
+					<div class="text_right">
+						<span>请选择尺码</span>
+						<i></i>
+						<select class="size">
+							<option>请选择尺码</option>
+							<option>40</option>
+							<option>41</option>
+							<option>42</option>
+							<option>43</option>
+							<option>44</option>
+							<option>45</option>
+							<option>46</option>
+						</select>
+					</div>
+				</div>
+				<div class="num">
+					<span>数量</span>
+					<div class="text_right">
+						<span class="number">1</span>
+						<div class="btn">
+							<span class="add"></span>
+							<span class="reduce"></span>
+						</div>
+						
+					</div>
+				</div>
+				<a class="buy">立即购买</a>
+				<a class="addcar">添加到购物车</a>
+			</div>
+		</div>
+		<!------------------------------------------------------------------->
+		<div class="footer"></div>
+		
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/scroll.js" ></script>
+<script src="js/lunbo.js" ></script>
+<script src="js/buttonhover.js" ></script>
+<script src="js/mask.js" ></script>
+<script src="js/login_register.js" ></script>
+<script src="js/top.js"></script>
+		<script type="text/javascript">
+			$(".footer").load("footer.html");
+//-------------------------------------------------------
+//点击列表ele1,切换ele2,3,4的图片地址
+			function changeimg(ele1,ele2,ele3,ele4){
+				this.ele1=$(ele1);
+				this.ele2=$(ele2);
+				this.ele3=$(ele3);
+				this.ele4=$(ele4);
+				this.init();
+			}
+			changeimg.prototype={
+				constructor:changeimg,
+				init(){
+					var _this=this;
+					this.oli=this.ele1.children();
+					$.each(this.oli,function(index,item){
+						$(item).click(function(){
+							var src1=$(item).children().attr("src");
+							src2 = src1.replace(/S/g,"H");
+							_this.ele2.attr("src",src2);
+							
+							src3 = src1.replace(/S/g,"L");
+							_this.ele3.attr("src",src3);
+						})
+					});
+				}
+			}
+			new changeimg(".content .middle .list",".content .middle .img img",".content .middle .big img");
+//放大镜------------------------------------------------
+			function magnifier(img,pop,big){
+				this.img=$(img);
+				this.pop=$(pop);
+				this.big=$(big);
+				if(this.img.length==0||this.pop.length==0||this.big.length==0)return;
+				this.init();
+			}
+			magnifier.prototype={
+				constructor:magnifier,
+				init(){
+						$(this.img).hover(function(){
+							this.pop.fadeToggle();
+							this.big.fadeToggle();
+						}.bind(this));
+						this.img.on("mousemove.popmove",$.proxy(this.popmove,this));
+						this.img.on("mousemove.bigmove",$.proxy(this.bigmove,this));
+				},
+				popmove(event){
+					//鼠标到img的位置x,y
+					var x=event.pageX-this.img.offset().left-this.pop.width()/2;
+					var y=event.pageY-this.img.offset().top-this.pop.height()/2;
+					//边界检测
+					var maxwidth=this.img.width()-this.pop.width();
+					var maxheight=this.img.height()-this.pop.height();
+					x=x<=0?0:x;
+					x=x>maxwidth?maxwidth:x;
+					y=y<=0?0:y;
+					y=y>=maxheight?maxheight:y;
+					
+					this.pop.css({
+						left:x,
+						top:y
+					})
+					//小框移动的位置百分比
+					this.propx=Math.round(x/maxwidth*100);
+					this.propy=Math.round(y/maxheight*100);
+//					console.log(this.propx,this.propy)
+				},
+				bigmove(){
+					var bigimg=this.big.find("img");
+					var maxwidth=bigimg.width()-this.big.width();
+					var maxheight=bigimg.height()-this.big.height();
+					
+//					console.log(maxheight);
+					var x=Math.floor(maxwidth*this.propx/100);
+					var y=Math.floor(maxheight*this.propy/100);
+					bigimg.css({
+						left:-x,
+						top:-y
+					})
+				}
+			}
+			new magnifier(".content .middle .img",".content .middle .img .pop",".content .middle .big")
+//尺码-----------------------------------
+			$(".content .size").click(function(){
+				var value=$(this).val();
+				$(".content .select .text_right span").text(value);
+			}) 
+//数量----------------------------------
+			function Num(selector){
+				this.main=$(selector);
+				this.num=this.main.find(".number");
+				this.add=this.main.find(".add");
+				this.reduce=this.main.find(".reduce");
+				this.init();
+			}
+			Num.prototype={
+				constructor:Num,
+				init(){
+					var i=1;
+					this.add.click(function(){
+						i++;
+						this.num.text(i);
+					}.bind(this))
+					this.reduce.click(function(){
+						i--;
+						i=i<1?1:i;
+						this.num.text(i);
+					}.bind(this))
+				}
+			}
+			new Num(".num");
+//立即购买-------------------------------------
+$(".buy").hover(function(){
+	$(this).fadeTo("fast",0.6);
+},function(){
+	$(this).fadeTo("fast",1);
+})
+//添加到购物车----------------------------------------
+function buy(selector){
+	this.ele=$(selector);
+	this.init();
+}
+buy.prototype={
+	constructor:buy,
+	init(){
+		this.ele.hover(function(){
+			$(this).fadeTo("fast",0.6);
+		},function(){
+			$(this).fadeTo("fast",1);
+		})
+		this.ele.on("click",$.proxy(this.addcar,this));
+	},
+	addcar(){
+		$(".hidden_interface .header_cart")
+		.siblings()
+		.slideUp()
+		.end()
+		.slideDown(function(){
+			if($(".ss_interface").css("display")=="block"){
+					new mask("body");
+				}else{
+					$(".mask").remove()
+				}
+		});
+	}
+}
+new buy(".addcar")
+//购物车---------------------------
+	$(".close_cart").click(function(){
+		$(".header_cart").slideUp();
+	})
+	$(".header_cart .right .money_btn").hover(function(){
+		$(this).fadeTo("fast",0.6);
+		},function(){
+			$(this).fadeTo("fast",1);
+	})
+		</script>
+	</body>
+</html>

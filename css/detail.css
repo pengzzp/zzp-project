@@ -1,0 +1,294 @@
+.content{
+	width: 1000px;
+	position:relative;
+	overflow: hidden;
+	margin: 50px auto;
+}
+.content>div{
+	float: left;
+}
+.content .left{
+	width: 200px;
+	height: 130px;
+}
+.content .middle{
+	width: 520px;
+	height: 907px;
+	margin: 0 40px;
+}
+.content .right{
+	width: 200px;
+	height: 455px;
+}
+.content .left>div{
+	width: 200px;
+	height: 30px;
+	position: relative;
+	line-height: 30px;
+	margin-top: 20px;
+}
+.content .left>div i{
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 0;left: 0;
+	background: url(../img/detail.png) no-repeat;
+}
+.content .left>div span{
+	font-size: 14px;
+	margin-left: 40px;
+}
+.content .left .favorite i{
+	background-position-y:-40px;
+}
+.content .left .comment a{
+	display: block;
+	width: 100px;
+	height: 30px;
+	background: url(../img/stars.png);
+}
+.content .middle .name h2{
+	width: 100%;
+	text-align: center;
+	line-height: 37px;
+	font-size: 24px;
+	font-weight: bold;
+}
+.content .middle .name p{
+	text-align: center;
+    width: 100%;
+    line-height: 37px;
+    font-size: 24px;
+	font-weight: bold;
+}
+.content .middle .img{
+	width: 450px;
+	height:450px;
+	text-align: center;
+	position: relative;
+	left: 35px;
+	/*border: 1px solid black;*/
+}
+.content .middle .img img{
+	width: 450px;
+	height: 450px;
+}
+.content .middle .img .pop{
+	width: 56px;
+	height: 143px;
+	position: absolute;
+	bottom: 0;left: 0;
+	border: 1px solid #ccc;
+	background:white;
+	opacity: 0.6;
+	display:none;
+	z-index: 100;
+	cursor:url(../img/zoom-add.png) 12 12,crosshair;
+}
+.content .middle .big{
+	width: 200px;
+	height: 580px;
+	position: absolute;
+	top: 0;left: 0;
+	z-index: 100;
+	overflow: hidden;
+	background: #e9e9e9;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #e9e9e9;
+	display: none;
+}
+.content .middle .big img{
+	position: absolute;
+}
+.content .middle .list{
+	width: 100%;
+	height: 72px;
+	overflow: hidden;
+}
+.content .middle .list li{
+	width: 72px;
+	height: 72px;
+	float: left;
+	margin-left: 10px;
+	border: 1px solid #b7b7b7;
+	box-sizing: border-box;
+	text-align: center;
+}
+.content .middle .list li img{
+	width:60px;
+	height: 60px;
+}
+.content .middle>p{
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 12px;
+    position: relative;
+}
+.content .middle>h3{
+	font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000;
+}
+.content .middle>a{
+	display: block;
+	width: 290px;
+	height: 50px;
+	margin:20px auto;
+	background: black;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+}
+.content .right .list{
+	width: 100%;
+	height: 60px;
+	overflow: hidden;
+}
+.content .right .list li{
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-left: 10px;
+	border: 1px solid #b7b7b7;
+	box-sizing: border-box;
+	text-align: center;
+}
+.content .right .list li img{
+	width:38px;
+	height: 38px;
+}
+.content .right .pop{
+	margin-top: 10px;
+}
+.content .right .pop i{
+	display: inline-block;
+	background: url(../img/sprites_account.png) no-repeat -10px -138px;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+.content .right .pop span{
+	font-size: 14px;
+	border-bottom: 2px solid #999;
+}
+.content .right .select{
+    height: 30px;
+    margin: 20px 0;
+}
+.content .right .select>span{
+    height: 30px;
+    width: 90px;
+    color: #333;
+    font-size: 12px;
+    line-height: 30px;
+    float: left;
+}
+.content .right .select .text_right{
+    position: relative;
+    width: 98px;
+    height: 28px;
+    border: 1px solid #b7b7b7;
+    float: right;
+}
+.content .right .select .text_right span{
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    width: 67px;
+}
+.content .right .select .text_right i{
+	width: 30px;
+    height: 28px;
+    display: block;
+    background: url(../img/detail.png) no-repeat  11px -132px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 1px solid #b7b7b7;
+}
+.content .right .select .text_right .size{
+	width: 100%;
+    height: 28px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    font-family:  "新宋体";
+}
+.content .right .num{
+    height: 30px;
+    margin: 20px 0;
+}
+.content .right .num>span{
+    height: 30px;
+    width: 90px;
+    color: #333;
+    font-size: 12px;
+    line-height: 30px;
+    float: left;
+    font-family: arial;
+}
+.content .right .num .text_right{
+    position: relative;
+    width: 98px;
+    height: 28px;
+    border: 1px solid #b7b7b7;
+    float: right;
+}
+.content .right .num .text_right>span{
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    width: 67px;
+}
+.content .right .num .text_right .btn{
+	width: 30px;
+    height: 28px;
+    display: block;
+    background: url(../img/detail.png) no-repeat  11px -132px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 1px solid #b7b7b7;
+}
+.content .right .num .text_right .btn span{
+    display: block;
+    background: transparent;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+.content .right .num .text_right .btn .add{
+	top: 0;
+}
+.content .right .num .text_right .btn .reduce{
+	bottom: 0;
+}
+.content .right>a{
+	width: 100%;
+	height: 50px;
+	display: block;
+	color: white;
+	background: #940000;
+	text-align: center;
+	line-height:50px;
+	margin-top: 5px;
+	font-size: 16px;
+}
+.content .right .buy{
+	margin-top: 30px;
+}
+
