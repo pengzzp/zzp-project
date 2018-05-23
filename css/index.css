@@ -165,8 +165,8 @@
 				height: auto;
 				display: none;
 			}
-			.hot .list .boy{
-				display:block;
+			.hot .list ul:nth-of-type(1){
+				display: block;
 			}
 			.hot .list hr{
 				width: 100%;

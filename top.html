@@ -1,4 +1,4 @@
-			<div class="header">
+<div class="header">
 				<a class="logo"></a>
 				<div class="denglu">
 					<span class="login">登录</span>
@@ -66,32 +66,89 @@
 					<ul>
 						<li>
 							<h3>手机号码</h3>
-							<input type="text" placeholder="173xxxx3062"/>
-							<span></span>
+							<input type="text" placeholder="173xxxx3062" class="phone"/>
+							<span>请输入11位有效中国手机号码！</span>
 						</li>
 						<li>
 							<h3>邮箱</h3>
-							<input type="text" placeholder="469809523@qq.com"/>
-							<span></span>
+							<input type="text" placeholder="469809523@qq.com" class="email"/>
+							<span>请输入正确的邮箱！</span>
 						</li>
-						<li>
+						<li class="sex">
 							<h3>性别</h3>
-							<input type="checkbox" placeholder="" class="checkbox"/>男的
-							<input type="checkbox" placeholder="" class="checkbox"/>女的
+							<input type="radio" placeholder="" class="checkbox" name="sex"/>
+							<em>男的</em>
+							<input type="radio" placeholder="" class="checkbox" name="sex"/>
+							<em>女的</em> 
 						</li>
 						<li>
 							<h3>输入密码</h3>
-							<input type="text" placeholder="密码至少为6位字符"/>
-							<span></span>
+							<input type="text" placeholder="密码至少为6位字符" class="pwd"/>
+							<span>请输入正确的密码！</span>
 						</li>
 						<li>
-							<h3>手机号码</h3>
-							<input type="text" placeholder="请再次输入密码"/>
-							<span></span>
+							<h3>确认密码</h3>
+							<input type="text" placeholder="请再次输入密码" class="pwd2"/>
+							<span>抱歉两次输入的密码不匹配！</span>
 						</li>
 						<li>
 							<h3>生日（年-月-日）</h3>
-							<input type="text" placeholder=""/>
+							<div class="select year">
+								<div class="text_right">
+									<span>1998</span>
+									<i></i>
+									<select class="size">
+										<option>1998</option>
+										<option>1999</option>
+										<option>2000</option>
+										<option>2001</option>
+										<option>2002</option>
+										<option>2003</option>
+										<option>2004</option>
+										<option>2005</option>
+									</select>
+								</div>
+							</div>
+							<div class="select month">
+								<div class="text_right">
+									<span>1</span>
+									<i></i>
+									<select class="size">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+									</select>
+								</div>
+							</div>
+							<div class="select day">
+								<div class="text_right">
+									<span>1</span>
+									<i></i>
+									<select class="size">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+									</select>
+								</div>
+							</div>
 						</li>
 						<li>
 							<h3>验证码</h3>
@@ -106,13 +163,14 @@
 						</li>
 						<li>
 							<h6>一旦登录，即表明你同意匡威的法律声明和使用规则</h6>
-							<button type="submit" id="register"><span>注册账户</span><i></i></button>
+							<button type="submit" id="register"><em>注册账户</em><i></i></button>
 						</li>
 					</ul>
 				</div>
 				</div>
 				<!--隐藏购物车界面-->
 				<div class="header_cart">
+					<i class="close_cart"></i>
 					<div class="left">
 						<img src="http://image.converse.com.cn/resources/product/537213C001/537213C001_1M_NEW.png"/>
 					</div>
@@ -137,7 +195,7 @@
 							<span>合计：</span>
 							<i>399.00</i>
 						</h2>
-						<a class="money_btn">结算</a>
+						<a class="money_btn">￥结算</a>
 					</div>
 				</div>
 			</div>
@@ -164,5 +222,3 @@
 					</ul>
 				</div>
 			</div>
-<script type="text/javascript">
-</script>

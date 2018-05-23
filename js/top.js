@@ -15,27 +15,31 @@ if(typeof define === "function" && define.amd){
 	erji.prototype={
 		constructor:erji,
 		init(){
+//			console.log(this.ele2.eq(0))
 			var _this=this;
-			this.ele1.hover(function(){
-//			 _this.ele2.css("height",262);
-			 _this.ele2
-			  .stop(false,true)
-			 .slideDown();
-			 new mask("body");
-			},function(){
-				 _this.ele2
-				 .stop(false,true)
-				 .fadeOut();
-				 $(".mask").remove();
-			})
-			this.ele2.hover(function(){
-				_this.ele2.stop();
-				_this.ele2.css("display","block")
-				new mask("body");
-			},function(){
-				_this.ele2.fadeOut();
-				$(".mask").remove();
-			})
+			$.each(this.ele1,function(index,item){
+				$(item).hover(function(){
+				 _this.ele2.hide();
+				 _this.ele2.eq(index)
+				 .stop()
+				 .fadeTo(500,1);
+				 new mask("body");
+				 
+				 _this.ele2.eq(index).hover(function(){
+						$(this).stop();
+						$(this).css("display","block")
+						new mask("body");
+					},function(){
+						$(this).stop().fadeOut();
+						$(".mask").remove();
+					})
+				},function(){
+					 _this.ele2.eq(index)
+					 .stop()
+					 .fadeTo(500,0);
+					$(".mask").remove();
+				})
+			});
 		}
 	}
 	new erji(".top .list>ul li",".top .list .item");
@@ -223,7 +227,7 @@ if(typeof define === "function" && define.amd){
 		}
 	}
 	
-	new Validation(".register_interface")
+	new Validation(".register_interface");
 
 
 
